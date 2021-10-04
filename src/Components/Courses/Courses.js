@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useContext } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
+import { CourseContext } from '../../App';
 
 const Courses = () => {
-    const [courses, setCourses] = useState([]);
-    useEffect(() => {
-        fetch('/fakeLanguageData.json')
-            .then(res => res.json())
-            .then(data => setCourses(data))
-    }, []);
+    /* Receive Fake Data from App.js using Context Api */
+    const courses = useContext(CourseContext);
     return (
         <div>
             <section className="py-5">
@@ -26,7 +24,7 @@ const Courses = () => {
                                             <Card.Text>{course.description.slice(0, 178)}</Card.Text>
                                             <Row md={2} className="pt-3 border-top card_footer d-flex align-items-center">
                                                 <Col>
-                                                    <h5><span className="text-danger fw-bold">Price:</span> ${course.price}</h5>
+                                                    <h5 className="mb-0"><span className="text-danger fw-bold">Price:</span> ${course.price}</h5>
                                                 </Col>
                                                 <Col>
                                                     <button className="btn btn-grad">See More</button>

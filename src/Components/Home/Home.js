@@ -1,18 +1,13 @@
 import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useContext } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
+import { CourseContext } from '../../App';
 import heroImg from '../../images/hero-img.png';
 import './Home.css';
 
 const Home = () => {
-    const [courses, setCourses] = useState([]);
-    useEffect(() => {
-        fetch('/fakeLanguageData.json')
-            .then(res => res.json())
-            .then(data => setCourses(data))
-    }, []);
-
+    /* Receive Fake JSON Data from App.js using Context Api */
+    const courses = useContext(CourseContext);
     return (
         <div>
             {/* Hero Part */}
@@ -47,7 +42,7 @@ const Home = () => {
                                             <Card.Text>{course.description.slice(0, 178)}</Card.Text>
                                             <Row md={2} className="pt-3 border-top card_footer d-flex align-items-center">
                                                 <Col>
-                                                    <h5><span className="text-danger fw-bold">Price:</span> ${course.price}</h5>
+                                                    <h5 className="mb-0"><span className="text-danger fw-bold">Price:</span> ${course.price}</h5>
                                                 </Col>
                                                 <Col>
                                                     <button className="btn btn-grad">See More</button>

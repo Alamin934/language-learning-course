@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-// import { Button } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
@@ -9,10 +8,24 @@ import Courses from './Components/Courses/Courses';
 import NotFound from './Components/NotFound/NotFound';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+import { useState } from 'react';
+import { createContext } from 'react';
+import { useEffect } from 'react';
+
+/* Created Context API*/
+export const CourseContext = createContext();
 
 function App() {
+  /* Load Fake Data and set State and sending data using Context Api */
+  const [courses, setCourses] = useState([]);
+  useEffect(() => {
+    fetch('/fakeLanguageData.json')
+      .then(res => res.json())
+      .then(data => setCourses(data))
+  }, []);
+
   return (
-    <div className="App">
+    <CourseContext.Provider value={courses}>
       <Router>
         <Header></Header>
         <Switch>
@@ -37,7 +50,7 @@ function App() {
         </Switch>
         <Footer></Footer>
       </Router>
-    </div >
+    </CourseContext.Provider>
   );
 }
 
