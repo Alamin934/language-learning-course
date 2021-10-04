@@ -14,7 +14,7 @@ const Header = () => {
                             <NavLink to="/home" className="ms-md-3 ms-0 nav-link">HOME</NavLink>
                             <NavLink to="/about" className="ms-md-3 ms-0 nav-link">ABOUT</NavLink>
                             <NavLink to="/blog" className="ms-md-3 ms-0 nav-link">BLOG</NavLink>
-                            <NavLink to="/course" className="ms-md-3 ms-0 nav-link">COURSES</NavLink>
+                            <NavLink to="/courses" className="ms-md-3 ms-0 nav-link">COURSES</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
