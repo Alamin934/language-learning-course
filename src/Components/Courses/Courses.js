@@ -2,17 +2,11 @@ import React from 'react';
 import { useContext } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-// import { useHistory } from 'react-router-dom';
 import { CourseContext } from '../../App';
 
 const Courses = () => {
     /* Receive Fake Data from App.js using Context Api */
     const courses = useContext(CourseContext);
-
-    // const history = useHistory();
-    // const handleCourseDetail = () => {
-    //     history.push(`/courseDetail/${course.id}`);
-    // }
     return (
         <div>
             <section className="py-5">
@@ -23,7 +17,7 @@ const Courses = () => {
                     <Row xs={1} md={2} lg={3} className="g-4">
                         {
                             courses?.map(course =>
-                                <Col>
+                                <Col key={course.thumbnail}>
                                     <Card className="shadow">
                                         <Card.Img variant="top" src={course.thumbnail} />
                                         <Card.Body>
