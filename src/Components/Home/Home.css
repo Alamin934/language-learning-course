@@ -1,0 +1,55 @@
+.hero-text p{
+    border-top-left-radius: 0rem !important;
+    width: 35%;
+    font-weight: 500;
+}
+.hero-text h1{
+    font-size: 50px;
+    line-height: 68px;
+}
+.btn-grad {
+    background-image: linear-gradient(to right, #e21028 0%, #EA384D  51%, #e21028  100%);
+    margin-top: 15px;
+    padding: 12px 45px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border:none;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .hero-text p{
+        width: 65%;
+    }
+    .hero-text h1{
+        font-size: 42px;
+        line-height: 48px;
+    }
+    .btn-grad {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .hero-text p{
+        width: 58%;
+    }
+    .hero-text h1{
+        font-size: 34px;
+        line-height: 46px;
+    }
+    .btn-grad {
+        font-size: 15px;
+        padding: 12px 35px;
+    }
+}
+     
