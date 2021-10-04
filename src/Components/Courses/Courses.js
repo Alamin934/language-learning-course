@@ -1,7 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import { CourseContext } from '../../App';
 
 const Courses = () => {
@@ -28,9 +27,7 @@ const Courses = () => {
                                                     <h5 className="mb-0"><span className="text-danger fw-bold">Price:</span> ${course.price}</h5>
                                                 </Col>
                                                 <Col>
-                                                    <Link to={`/courseDetail/${course.id}`} className="nav-link">
-                                                        <button className="btn btn-grad">See More</button>
-                                                    </Link>
+                                                    <button className="btn btn-grad">See More</button>
                                                 </Col>
                                             </Row>
                                         </Card.Body>

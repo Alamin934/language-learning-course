@@ -8,10 +8,8 @@ import Courses from './Components/Courses/Courses';
 import NotFound from './Components/NotFound/NotFound';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
-// import CourseDetail from './Components/CourseDetail/CourseDetail';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { createContext } from 'react';
-import { useEffect } from 'react';
 
 /* Created Context API*/
 export const CourseContext = createContext();
@@ -45,9 +43,6 @@ function App() {
           <Route exact path="/courses">
             <Courses></Courses>
           </Route>
-          {/* <Route exact path="/courseDetail/:courseId">
-            <CourseDetail></CourseDetail>
-          </Route> */}
           <Route exact path="*">
             <NotFound></NotFound>
           </Route>
