@@ -1,3 +1,4 @@
+/* Home Page Hero Section Styles */
 .hero-text p{
     border-top-left-radius: 0rem !important;
     width: 35%;
@@ -7,6 +8,7 @@
     font-size: 50px;
     line-height: 68px;
 }
+/* Custom Button Styles */
 .btn-grad {
     background-image: linear-gradient(to right, #e21028 0%, #EA384D  51%, #e21028  100%);
     margin-top: 15px;
@@ -16,7 +18,7 @@
     background-size: 200% auto;
     color: white;            
     box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
+    border-radius: 5px;
     display: block;
     border:none;
 }
@@ -26,7 +28,20 @@
     color: #fff;
     text-decoration: none;
 }
-
+/* Cards info Style */
+.card-title:hover{
+    color: rgb(220, 53, 69);
+    cursor: pointer;
+    transition: 0.4s;
+}
+.card_footer .btn-grad{
+    padding: 10px 26px;
+    margin-top: 0px;
+    font-size: 14px;
+    margin-left: auto;
+}
+/* Media Query For Responsive */
+/* Break Point for Tablet */
 @media only screen and (max-width: 992px) {
     .hero-text p{
         width: 65%;
@@ -39,6 +54,7 @@
         font-size: 15px;
     }
 }
+/* Break Point for Mobile */
 @media only screen and (max-width: 576px) {
     .hero-text p{
         width: 58%;
