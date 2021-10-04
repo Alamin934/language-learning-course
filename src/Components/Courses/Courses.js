@@ -1,11 +1,18 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import { CourseContext } from '../../App';
 
 const Courses = () => {
     /* Receive Fake Data from App.js using Context Api */
     const courses = useContext(CourseContext);
+
+    // const history = useHistory();
+    // const handleCourseDetail = () => {
+    //     history.push(`/courseDetail/${course.id}`);
+    // }
     return (
         <div>
             <section className="py-5">
@@ -13,9 +20,9 @@ const Courses = () => {
                     <h1 className="text-center mb-4 fw-bold">Course</h1>
                 </div>
                 <Container>
-                    <Row xs={1} md={3} className="g-4">
+                    <Row xs={1} md={2} lg={3} className="g-4">
                         {
-                            courses.map(course =>
+                            courses?.map(course =>
                                 <Col>
                                     <Card className="shadow">
                                         <Card.Img variant="top" src={course.thumbnail} />
@@ -27,7 +34,9 @@ const Courses = () => {
                                                     <h5 className="mb-0"><span className="text-danger fw-bold">Price:</span> ${course.price}</h5>
                                                 </Col>
                                                 <Col>
-                                                    <button className="btn btn-grad">See More</button>
+                                                    <Link to={`/courseDetail/${course.id}`} className="nav-link">
+                                                        <button className="btn btn-grad">See More</button>
+                                                    </Link>
                                                 </Col>
                                             </Row>
                                         </Card.Body>

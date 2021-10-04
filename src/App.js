@@ -8,6 +8,7 @@ import Courses from './Components/Courses/Courses';
 import NotFound from './Components/NotFound/NotFound';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+// import CourseDetail from './Components/CourseDetail/CourseDetail';
 import { useState } from 'react';
 import { createContext } from 'react';
 import { useEffect } from 'react';
@@ -19,7 +20,7 @@ function App() {
   /* Load Fake Data and set State and sending data using Context Api */
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    fetch('/fakeLanguageData.json')
+    fetch('./fakeLanguageData.JSON')
       .then(res => res.json())
       .then(data => setCourses(data))
   }, []);
@@ -44,6 +45,9 @@ function App() {
           <Route exact path="/courses">
             <Courses></Courses>
           </Route>
+          {/* <Route exact path="/courseDetail/:courseId">
+            <CourseDetail></CourseDetail>
+          </Route> */}
           <Route exact path="*">
             <NotFound></NotFound>
           </Route>

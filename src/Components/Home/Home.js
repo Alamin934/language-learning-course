@@ -33,7 +33,7 @@ const Home = () => {
                 <Container>
                     <Row xs={1} md={2} className="g-4">
                         {
-                            courses.slice(0, 4).map(course =>
+                            courses?.slice(0, 4).map(course =>
                                 <Col>
                                     <Card className="shadow">
                                         <Card.Img variant="top" src={course.thumbnail} />
