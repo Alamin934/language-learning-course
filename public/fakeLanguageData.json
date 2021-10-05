@@ -6,7 +6,7 @@
         "duration": "2 Week",
         "price": "Free",
         "description": "If you are a newbie to talking, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic & Intermediate knowledge when talking a different language: What is the best way talk to in different language. This process is often overlooked by most of the newbie. But it can be considered the most important key point to bring your speaking to stand out of the crowd. A great teacher service could help you to improve speak.",
-        "teacher": "by Jhon Doie",
+        "instructor": "by Jhon Doie",
         "rate": 4.8,
         "course_lavel": "Basic",
         "category": "Enlish"
@@ -56,7 +56,7 @@
         "description": "If you are a newbie to talking, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic & Intermediate knowledge when talking a different language: What is the best way talk to in different language. This process is often overlooked by most of the newbie. But it can be considered the most important key point to bring your speaking to stand out of the crowd. A great teacher service could help you to improve speak.",
         "instructor": "by Harry Smith",
         "rate": 4.8,
-        "course_lavel": "Basic",
+        "course_lavel": "Intermediate",
         "category": "Enlish"
     },
     {
@@ -126,7 +126,7 @@
         "duration": "4 Week",
         "price": "Free",
         "description": "If you are a newbie to talking, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic & Intermediate knowledge when talking a different language: What is the best way talk to in different language. This process is often overlooked by most of the newbie. But it can be considered the most important key point to bring your speaking to stand out of the crowd. A great teacher service could help you to improve speak.",
-        "teacher": "by Harry Smith",
+        "instructor": "by Harry Smith",
         "rate": 4.8,
         "course_lavel": "Basic",
         "category": "French"

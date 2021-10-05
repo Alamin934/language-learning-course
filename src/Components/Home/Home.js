@@ -35,11 +35,12 @@ const Home = () => {
                         {
                             courses?.slice(0, 4).map((course) =>
                                 <Col key={course.id}>
-                                    <Card className="shadow">
+                                    {/* Course Details*/}
+                                    <Card className="shadow position-relative">
                                         <Card.Img variant="top" src={course.thumbnail} />
                                         <Card.Body>
                                             <Card.Title className="fs-4 card-title">{course.course_name}</Card.Title>
-                                            <Card.Text>{course.description.slice(0, 178)}</Card.Text>
+                                            <Card.Text>{course.description.slice(0, 178)} <small className="fst-italic text-danger">..{course.instructor}</small></Card.Text>
                                             <Row md={2} className="pt-3 border-top card_footer d-flex align-items-center">
                                                 <Col>
                                                     <h5 className="mb-0"><span className="text-danger fw-bold">Price:</span> ${course.price}</h5>
@@ -49,6 +50,10 @@ const Home = () => {
                                                 </Col>
                                             </Row>
                                         </Card.Body>
+                                        {/* Course Level */}
+                                        <div>
+                                            <p className="bg-danger w-25 text-center text-white position-absolute top-0 start-0 m-2 pb-1"><small>{course.course_lavel}</small></p>
+                                        </div>
                                     </Card>
                                 </Col>
                             )
